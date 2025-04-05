@@ -113,7 +113,9 @@
     "copyfiles": "copyfiles -u 1 \"src/**/*.{html,css,scss,ttf,woff,woff2,eot,svg,jpg,png,json}\" dist/",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "prepublishOnly": "pnpm clean && pnpm turbo build"
+    "prepublishOnly": "pnpm clean && pnpm turbo build",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@date-fns/tz": "1.2.0",
@@ -142,10 +144,18 @@
   "devDependencies": {
     "@babel/cli": "7.26.4",
     "@babel/core": "7.26.7",
-    "@babel/preset-env": "7.26.7",
-    "@babel/preset-react": "7.26.3",
-    "@babel/preset-typescript": "7.26.0",
+    "@babel/preset-env": "^7.20.0",
+    "@babel/preset-react": "^7.18.0",
+    "@babel/preset-typescript": "^7.18.0",
     "@hyrious/esbuild-plugin-commonjs": "^0.2.4",
+    "@storybook/addon-essentials": "^7.0.0",
+    "@storybook/addon-interactions": "^7.0.0",
+    "@storybook/addon-onboarding": "^8.6.12",
+    "@storybook/addon-webpack5-compiler-swc": "^3.0.0",
+    "@storybook/blocks": "^7.0.0",
+    "@storybook/react": "^7.0.0",
+    "@storybook/react-webpack5": "^7.0.0",
+    "@storybook/test": "^8.6.12",
     "@types/react": "19.0.12",
     "@types/react-dom": "19.0.4",
     "@types/uuid": "10.0.0",
@@ -153,7 +163,11 @@
     "esbuild": "0.24.2",
     "esbuild-sass-plugin": "3.3.1",
     "eslint-plugin-react-compiler": "19.0.0-beta-714736e-20250131",
-    "payload": "3.29.0"
+    "payload": "3.29.0",
+    "storybook": "^7.0.0",
+    "@storybook/addon-links": "^7.0.0",
+    "@storybook/testing-library": "^0.2.0",
+    "tsconfig-paths-webpack-plugin": "^4.0.0"
   },
   "peerDependencies": {
     "next": "^15.2.3",
